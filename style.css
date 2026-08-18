@@ -1,13 +1,3 @@
-/* =========================================================
-   IA & VOCÊ
-   CSS BASE DO PROJETO
-   ========================================================= */
-
-
-/* =========================================================
-   VARIÁVEIS
-   ========================================================= */
-
 :root {
     --bg: #020313;
     --bg-card: #05051a;
@@ -30,11 +20,6 @@
 
     --largura: 1180px;
 }
-
-
-/* =========================================================
-   RESET
-   ========================================================= */
 
 * {
     margin: 0;
@@ -74,23 +59,14 @@ h3 {
     line-height: 1.15;
 }
 
-
-/* =========================================================
-   MENU / HEADER
-   ========================================================= */
-
 .logoeafins {
     width: 100%;
     max-width: var(--largura);
     margin: 0 auto;
-
     min-height: 72px;
-
     display: flex;
     align-items: center;
-
     padding: 16px 32px;
-
     gap: 28px;
 }
 
@@ -102,14 +78,10 @@ h3 {
 
 .logoeafins a {
     position: relative;
-
     font-size: 15px;
     font-weight: 600;
-
     color: var(--branco);
-
     white-space: nowrap;
-
     transition:
         color 0.2s ease,
         transform 0.2s ease;
@@ -122,19 +94,11 @@ h3 {
 
 .logoeafins h2 {
     margin-left: auto;
-
     color: var(--magenta);
-
     font-size: 18px;
     font-weight: 700;
-
     white-space: nowrap;
 }
-
-
-/* =========================================================
-   TÍTULOS GERAIS
-   ========================================================= */
 
 body > h1,
 body > h2 {
@@ -145,47 +109,20 @@ body > h2 {
 
 body > h1 {
     padding: 25px 32px 30px;
-
     font-size: clamp(32px, 4vw, 54px);
     font-weight: 700;
 }
 
 body > h2 {
     padding: 25px 32px;
-
     font-size: clamp(28px, 3vw, 42px);
 }
-
-
-/* =========================================================
-   CORES DOS TEXTOS
-   ========================================================= */
 
 h1,
 h2,
 h3 {
     color: var(--branco);
 }
-
-h1::first-letter,
-h2::first-letter {
-    /* Mantém o título natural.
-       As cores específicas das páginas
-       serão tratadas abaixo. */
-}
-
-
-/* =========================================================
-   PÁGINA PRINCIPAL
-   ========================================================= */
-
-/*
-   A estrutura original da página principal não possui
-   classes nos primeiros divs.
-
-   Por isso usamos os elementos existentes sem obrigar
-   seus amigos a refazer o HTML inteiro.
-*/
 
 body:has(.cards) > div:nth-of-type(2) {
     max-width: 1180px;
@@ -195,10 +132,8 @@ body:has(.cards) > div:nth-of-type(2) {
 
 body:has(.cards) > div:nth-of-type(2) h1 {
     max-width: 650px;
-
     font-size: clamp(38px, 5vw, 64px);
     font-weight: 700;
-
     line-height: 1.05;
 }
 
@@ -208,37 +143,24 @@ body:has(.cards) > div:nth-of-type(2) h1::first-line {
 
 body:has(.cards) > div:nth-of-type(2) p {
     max-width: 580px;
-
     margin-top: 25px;
-
     color: var(--texto-secundario);
-
     font-size: 17px;
 }
-
-
-/* Botão principal */
 
 .btncomecar {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     margin: 30px 0 45px 60px;
-
     min-width: 190px;
     min-height: 48px;
-
     padding: 12px 22px;
-
     border: 1px solid var(--magenta);
     border-radius: 8px;
-
     color: var(--branco);
-
     font-size: 15px;
     font-weight: 600;
-
     transition:
         background-color 0.2s ease,
         box-shadow 0.2s ease,
@@ -247,22 +169,15 @@ body:has(.cards) > div:nth-of-type(2) p {
 
 .btncomecar:hover {
     background-color: rgba(255, 31, 216, 0.12);
-
     box-shadow:
         0 0 12px rgba(255, 31, 216, 0.35);
-
     transform: translateY(-2px);
 }
-
-
-/* Imagem principal */
 
 body:has(.cards) > div:nth-of-type(4) {
     max-width: 1180px;
     margin: -180px auto 80px;
-
     padding: 0 40px;
-
     display: flex;
     justify-content: flex-end;
 }
@@ -271,54 +186,36 @@ body:has(.cards) > div:nth-of-type(4) img {
     width: min(48%, 540px);
 }
 
-
-/* Título "O que você vai aprender" */
-
 body:has(.cards) > div:nth-of-type(5) {
     max-width: var(--largura);
-
     margin: 0 auto 35px;
-
     padding: 0 32px;
 }
 
 body:has(.cards) > div:nth-of-type(5) h2 {
     text-align: center;
-
     font-size: 30px;
 }
-
-
-/* Cards */
 
 .cards {
     width: calc(100% - 64px);
     max-width: var(--largura);
-
     margin: 0 auto 70px;
-
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-
     gap: 18px;
 }
 
 .card {
     min-height: 260px;
-
     padding: 24px 18px;
-
     border: 1px solid var(--borda-roxa);
     border-radius: 8px;
-
     background-color: rgba(3, 4, 25, 0.8);
-
     display: flex;
     flex-direction: column;
     align-items: center;
-
     text-align: center;
-
     transition:
         transform 0.2s ease,
         box-shadow 0.2s ease;
@@ -338,7 +235,6 @@ body:has(.cards) > div:nth-of-type(5) h2 {
 
 .card:hover {
     transform: translateY(-5px);
-
     box-shadow:
         0 0 18px rgba(141, 34, 255, 0.18);
 }
@@ -346,11 +242,9 @@ body:has(.cards) > div:nth-of-type(5) h2 {
 .imagem-card {
     width: 70px;
     height: 70px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     margin-bottom: 18px;
 }
 
@@ -361,11 +255,8 @@ body:has(.cards) > div:nth-of-type(5) h2 {
 
 .card h3 {
     min-height: 48px;
-
     margin-bottom: 14px;
-
     color: var(--magenta);
-
     font-size: 16px;
 }
 
@@ -376,109 +267,72 @@ body:has(.cards) > div:nth-of-type(5) h2 {
 
 .card p {
     color: var(--texto-secundario);
-
     font-size: 13px;
 }
 
-
-/* =========================================================
-   PÁGINA SOBRE A IA
-   ========================================================= */
-
 body:has(.informacoes) > img {
     width: min(100%, 1180px);
-
     margin: 10px auto 30px;
-
     max-height: 420px;
-
     object-fit: cover;
     object-position: center;
 }
 
 body:has(.informacoes) > h1 {
     max-width: var(--largura);
-
     margin: 0 auto;
-
     padding: 0 32px 35px;
-
     font-size: 44px;
 }
 
 .informacoes {
     width: calc(100% - 64px);
     max-width: var(--largura);
-
     margin: 0 auto 70px;
 }
 
-
-/* Caixa rosa */
-
 .infrosa {
     margin-bottom: 30px;
-
     padding: 30px;
-
     border: 1px solid var(--borda-roxa);
     border-radius: 8px;
-
     background: rgba(4, 3, 25, 0.75);
 }
 
 .infrosa h3 {
     margin-bottom: 15px;
-
     color: var(--magenta);
-
     font-size: 20px;
 }
 
 .infrosa p {
     margin-bottom: 12px;
-
     color: var(--texto);
-
     font-size: 15px;
 }
 
-
-/* Caixa azul */
-
 .infazul {
     margin-bottom: 50px;
-
     padding: 30px;
-
     border: 1px solid var(--borda-azul);
     border-radius: 8px;
-
     background: rgba(4, 3, 25, 0.75);
 }
 
 .infazul h3 {
     margin-bottom: 15px;
-
     color: var(--ciano);
-
     font-size: 20px;
 }
 
 .infazul p {
     margin-bottom: 12px;
-
     color: var(--texto);
-
     font-size: 15px;
 }
 
-
-/* Título da seção */
-
 .informacoes > h2 {
     margin-bottom: 28px;
-
     font-size: 30px;
 }
 
@@ -486,18 +340,11 @@ body:has(.informacoes) > h1 {
     color: var(--branco);
 }
 
-
-/* Imagens da seção */
-
 .imagens {
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
     gap: 24px;
-
     padding: 25px;
-
     border: 1px solid var(--borda-roxa);
     border-radius: 8px;
 }
@@ -509,15 +356,12 @@ body:has(.informacoes) > h1 {
 .imagens img {
     width: 90px;
     height: 90px;
-
     object-fit: contain;
-
     margin: 0 auto 12px;
 }
 
 .imagens h3 {
     color: var(--magenta);
-
     font-size: 15px;
 }
 
@@ -526,16 +370,9 @@ body:has(.informacoes) > h1 {
     color: var(--azul);
 }
 
-
-/* =========================================================
-   PÁGINA CRIE COM IA
-   ========================================================= */
-
 body:has(.cardcrie) > h1 {
     text-align: center;
-
     margin-bottom: 30px;
-
     font-size: 44px;
 }
 
@@ -543,22 +380,14 @@ body:has(.cardcrie) > h1::first-line {
     color: var(--branco);
 }
 
-
-/* Caixas de introdução */
-
 .roxo,
 .rosa {
     width: calc(100% - 64px);
     max-width: var(--largura);
-
     margin: 0 auto 30px;
-
     padding: 28px 32px;
-
     border-radius: 8px;
-
     background: transparent;
-
     font-size: 15px;
 }
 
@@ -570,42 +399,25 @@ body:has(.cardcrie) > h1::first-line {
     border: 1px solid var(--borda-magenta);
 }
 
-
-/* Título */
-
 body:has(.cardcrie) > h2 {
     max-width: var(--largura);
-
     margin: 50px auto 30px;
-
     padding: 0 32px;
-
     text-align: center;
-
     font-size: 30px;
 }
-
-
-/* Cards de criação */
 
 .cardcrie {
     width: calc(100% - 64px);
     max-width: var(--largura);
-
     min-height: 180px;
-
     margin: 0 auto 24px;
-
     padding: 22px;
-
     display: flex;
     align-items: center;
-
     gap: 30px;
-
     border: 1px solid var(--borda-roxa);
     border-radius: 8px;
-
     background: rgba(4, 3, 25, 0.75);
 }
 
@@ -625,7 +437,6 @@ body:has(.cardcrie) > h2 {
     width: 180px;
     min-width: 180px;
     height: 130px;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -634,140 +445,87 @@ body:has(.cardcrie) > h2 {
 .imagecrie img {
     max-width: 100%;
     max-height: 100%;
-
     object-fit: contain;
 }
 
 .cardcrie p {
     color: var(--texto);
-
     font-size: 14px;
 }
 
-
-/* Linhas */
-
 body:has(.cardcrie) hr {
     width: 100%;
-
     margin: 55px 0;
-
     border: 0;
     border-top: 1px solid rgba(255, 255, 255, 0.35);
 }
 
-
-/* Texto dos prompts */
-
 body:has(.cardcrie) > p {
     max-width: var(--largura);
-
     margin: 0 auto 25px;
-
     padding: 0 32px;
-
     font-size: 15px;
 }
-
-
-/* Exemplo de prompt */
 
 .exemplo {
     width: calc(100% - 64px);
     max-width: 760px;
-
     margin: 25px auto 35px;
-
     padding: 28px 32px;
-
     border-radius: 18px;
-
     background: #4b096d;
-
     text-align: center;
 }
 
 .exemplo h2 {
     margin-bottom: 15px;
-
     font-size: 24px;
-
     color: var(--branco);
 }
 
 .exemplo p {
     color: var(--branco);
-
     font-size: 15px;
 }
 
-
-/* Resultado esperado */
-
 body:has(.cardcrie) > h3 {
     max-width: var(--largura);
-
     margin: 0 auto 12px;
-
     padding: 0 32px;
-
     font-size: 20px;
 }
 
 body:has(.cardcrie) > p:nth-last-of-type(2) {
     max-width: var(--largura);
-
     margin: 0 auto;
-
     padding: 0 32px;
-
     font-size: 15px;
 }
-
-
-/* Explicação final */
 
 .explicacao {
     width: calc(100% - 64px);
     max-width: 900px;
-
     margin: 0 auto 70px;
-
     padding: 30px;
-
     border-radius: 5px;
-
     background: #32005a;
-
     text-align: center;
 }
 
 .explicacao p {
     color: var(--texto);
-
     font-size: 15px;
 }
 
-
-/* =========================================================
-   PÁGINA IA NO DIA A DIA
-   ========================================================= */
-
 body:has(.inf1) > h1 {
     margin: 0 auto 35px;
-
     text-align: center;
-
     font-size: 44px;
 }
 
-
-/* Blocos superiores */
-
 .inf1,
 .inf2 {
-    width: calc(50% - 30px);
-
+    width: min(560px, calc(50% - 30px));
     min-height: 130px;
 
     padding: 24px;
@@ -781,46 +539,31 @@ body:has(.inf1) > h1 {
 }
 
 .inf1 {
-    margin-left: calc(50% - 590px);
+    margin-left: max(15px, calc((100% - 1180px) / 2));
 }
 
 .inf2 {
-    margin-left: calc(50% + 30px);
-
+    margin-left: calc(50% + 15px);
     margin-top: -130px;
-
-    border-color: var(--borda-roxa);
 }
 
 .inf1 p,
 .inf2 p {
     color: var(--texto);
-
     font-size: 14px;
 }
 
-
-/* Imagem da casa */
-
 body:has(.inf1) > img {
     width: min(850px, 90%);
-
     margin: 50px auto 30px;
-
     object-fit: contain;
 }
-
-
-/* Texto azul */
 
 .textazul {
     width: calc(100% - 64px);
     max-width: 1100px;
-
     margin: 0 auto 35px;
-
     padding: 24px;
-
     border: 1px solid var(--borda-azul);
     border-radius: 8px;
 }
@@ -830,45 +573,30 @@ body:has(.inf1) > img {
     font-size: 14px;
 }
 
-
-/* Texto rosa */
-
 .textrosa {
     width: calc(100% - 64px);
     max-width: 1100px;
-
     margin: 0 auto 35px;
-
     padding: 24px;
-
     border: 1px solid var(--borda-roxa);
     border-radius: 8px;
 }
 
-
-/* Benefícios */
-
 body:has(.inf1) > h2 {
     max-width: 1100px;
-
     margin: 30px auto 15px;
-
     padding: 0;
-
     font-size: 30px;
 }
 
 body:has(.inf1) > a {
     display: block;
-
     width: fit-content;
-
     margin: 0 auto 70px;
 }
 
 body:has(.inf1) > a img {
     width: 50px;
-
     transition:
         transform 0.2s ease,
         filter 0.2s ease;
@@ -876,31 +604,17 @@ body:has(.inf1) > a img {
 
 body:has(.inf1) > a:hover img {
     transform: translateX(5px);
-
     filter:
         drop-shadow(0 0 8px var(--ciano));
 }
 
-
-/* =========================================================
-   BENEFÍCIOS
-   ========================================================= */
-
 body:has(> h1:first-of-type):not(:has(.cards)):not(:has(.informacoes)):not(:has(.cardcrie)):not(:has(.inf1)) > h1 {
     text-align: center;
-
     margin-top: 40px;
-
     font-size: 44px;
 }
 
-
-/* =========================================================
-   RESPONSIVIDADE
-   ========================================================= */
-
 @media (max-width: 900px) {
-
     .logoeafins {
         gap: 18px;
         padding: 14px 20px;
@@ -945,24 +659,17 @@ body:has(> h1:first-of-type):not(:has(.cards)):not(:has(.informacoes)):not(:has(
     }
 }
 
-
 @media (max-width: 650px) {
-
     .logoeafins {
         min-height: auto;
-
         flex-wrap: wrap;
-
         justify-content: center;
-
         padding: 18px 12px;
-
         gap: 14px;
     }
 
     .logoeafins img {
         width: 110px;
-
         margin-right: 100%;
         margin-bottom: -5px;
     }
@@ -971,22 +678,15 @@ body:has(> h1:first-of-type):not(:has(.cards)):not(:has(.informacoes)):not(:has(
         margin-left: 0;
     }
 
-
     body > h1 {
         padding-left: 20px;
         padding-right: 20px;
-
         font-size: 34px;
     }
 
-
-    /* Principal */
-
     body:has(.cards) > div:nth-of-type(2) {
         margin-top: 25px;
-
         padding: 0 25px;
-
         text-align: center;
     }
 
@@ -1004,9 +704,7 @@ body:has(> h1:first-of-type):not(:has(.cards)):not(:has(.informacoes)):not(:has(
 
     body:has(.cards) > div:nth-of-type(4) {
         margin: 0 auto 50px;
-
         padding: 0 20px;
-
         justify-content: center;
     }
 
@@ -1016,15 +714,12 @@ body:has(> h1:first-of-type):not(:has(.cards)):not(:has(.informacoes)):not(:has(
 
     .cards {
         width: calc(100% - 32px);
-
         grid-template-columns: 1fr 1fr;
-
         gap: 12px;
     }
 
     .card {
         padding: 18px 12px;
-
         min-height: 230px;
     }
 
@@ -1035,9 +730,6 @@ body:has(> h1:first-of-type):not(:has(.cards)):not(:has(.informacoes)):not(:has(
     .card p {
         font-size: 11px;
     }
-
-
-    /* Sobre */
 
     body:has(.informacoes) > img {
         width: calc(100% - 30px);
@@ -1054,25 +746,18 @@ body:has(> h1:first-of-type):not(:has(.cards)):not(:has(.informacoes)):not(:has(
 
     .imagens {
         grid-template-columns: repeat(2, 1fr);
-
         padding: 18px;
     }
-
-
-    /* Crie */
 
     .roxo,
     .rosa {
         width: calc(100% - 30px);
-
         padding: 20px;
     }
 
     .cardcrie {
         width: calc(100% - 30px);
-
         flex-direction: column;
-
         text-align: center;
     }
 
@@ -1081,18 +766,12 @@ body:has(> h1:first-of-type):not(:has(.cards)):not(:has(.informacoes)):not(:has(
         min-width: 150px;
     }
 
-
-    /* Dia a dia */
-
     .inf1,
     .inf2 {
         width: calc(100% - 30px);
-
         margin-left: auto;
         margin-right: auto;
-
         margin-top: 0;
-
         min-height: auto;
     }
 
@@ -1102,7 +781,6 @@ body:has(> h1:first-of-type):not(:has(.cards)):not(:has(.informacoes)):not(:has(
 
     body:has(.inf1) > img {
         width: calc(100% - 30px);
-
         margin-top: 35px;
     }
 
@@ -1113,46 +791,27 @@ body:has(> h1:first-of-type):not(:has(.cards)):not(:has(.informacoes)):not(:has(
 
     body:has(.inf1) > h2 {
         width: calc(100% - 30px);
-
         font-size: 25px;
     }
 }
-
-
-/* =========================================================
-   ACESSIBILIDADE / INTERAÇÃO
-   ========================================================= */
 
 a:focus-visible {
     outline: 2px solid var(--ciano);
     outline-offset: 4px;
 }
 
-
-/* =========================================================
-   NOVA ESTRUTURA DA PÁGINA PRINCIPAL
-   ========================================================= */
-
 .pagina-principal {
     width: 100%;
     max-width: var(--largura);
-
     margin: 0 auto;
 }
 
-
-/* HERO */
-
 .hero {
     min-height: 560px;
-
     padding: 45px 55px;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
-
     align-items: center;
-
     gap: 30px;
 }
 
@@ -1163,11 +822,8 @@ a:focus-visible {
 
 .hero h1 {
     max-width: 570px;
-
     font-size: clamp(36px, 4vw, 58px);
-
     line-height: 1.03;
-
     color: var(--branco);
 }
 
@@ -1177,11 +833,8 @@ a:focus-visible {
 
 .hero p {
     max-width: 500px;
-
     margin-top: 22px;
-
     color: var(--texto-secundario);
-
     font-size: 15px;
 }
 
@@ -1191,15 +844,12 @@ a:focus-visible {
 
 .hero .btncomecar span {
     margin-left: 15px;
-
     color: var(--magenta);
-
     font-size: 18px;
 }
 
 .hero-imagem {
     display: flex;
-
     justify-content: center;
     align-items: center;
 }
@@ -1207,12 +857,8 @@ a:focus-visible {
 .hero-imagem img {
     width: 100%;
     max-width: 520px;
-
     object-fit: contain;
 }
-
-
-/* APRENDIZADO */
 
 .aprendizado {
     padding: 45px 32px 70px;
@@ -1220,20 +866,15 @@ a:focus-visible {
 
 .aprendizado > h2 {
     margin-bottom: 35px;
-
     text-align: center;
-
     font-size: 30px;
     font-weight: 700;
 }
 
 @media (max-width: 700px) {
-
     .hero {
         grid-template-columns: 1fr;
-
         padding: 30px 20px;
-
         text-align: center;
     }
 
