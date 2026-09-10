@@ -8,6 +8,8 @@ let movimentos = 0
 
 let bloqueado = false
 
+let paresEncontrados = 0
+
 function virarCarta(carta) {
 
     if (bloqueado) {
@@ -48,6 +50,12 @@ function verificarPar() {
 
         console.log("Par encontrado!")
 
+        paresEncontrados++
+
+        if (paresEncontrados === 8 ) {
+            document.getElementById("mensagem-vitoria").style.display = "block";
+        }
+
         primeiraCarta = null
 
         segundaCarta = null
@@ -86,3 +94,7 @@ cartas.forEach(function (carta) {
     })
 
 })
+
+function reiniciarJogo() {
+    location.reload();
+}
