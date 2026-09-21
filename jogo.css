@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080b1c; 
+    color: white;
+    min-height: 100vh;
+    padding: 30px 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 25px;
+    color: #3b82f6;
+    text-shadow:
+        0 0 5px #3b82f6,
+        0 0 12px #2563eb;
+}
+
+
+#cartas {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 130px);
+    gap: 10px;
+    justify-content: center;
+}
+
+
+.carta {
+    width: 130px;
+    height: 130px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 14px;
+    background: #080d20;
+    border: 2px solid #2563eb; 
+    box-shadow: 0 0 8px rgba(37, 99, 235, 0.6);
+    transition: transform 0.6s;
+}
+
+.carta img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease;
+}
+
+.carta::before {
+    content: "🧠";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 55px;
+    background: #080d20;
+    border-radius: 12px;
+    transition: 0.5s;
+}
+
+.carta.virada {
+    transform: rotateY(180deg);
+}
+
+.carta.virada::before {
+    opacity: 0;
+    transform: rotateY(90deg);
+}
+
+.carta.virada img {
+    opacity: 1;
+}
+
+
+.carta:hover {
+    border-color: #3b82f6;
+    box-shadow:
+        0 0 10px #2563eb,
+        0 0 20px rgba(37, 99, 235, 0.5);
+}
+
+
+.mensagem-vitoria {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    max-width: 90%;
+    padding: 35px 25px;
+    text-align: center;
+    background: #0d1230;
+    border: 2px solid #8b3dff;
+    border-radius: 20px;
+    box-shadow:
+        0 0 15px #6424c9,
+        0 0 35px rgba(108, 43, 210, 0.6);
+}
+
+
+
+.mensagem-vitoria h2 {
+    color: #bd7aff;
+    font-size: 30px;
+    margin-bottom: 15px;
+    text-shadow:
+        0 0 8px #7b2cff;
+}
+
+
+
+.mensagem-vitoria p {
+    color: #ddd;
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+
+
+.mensagem-vitoria button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    background:
+        #5424a8;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+
+.mensagem-vitoria button:hover {
+    background: #9333ea;
+    transform: scale(1.05);
+    box-shadow: 0 0 12px #7b2cff;
+}
+
+/*RESPONSIVIDADE */
+
+
+@media (max-width: 750px) {
+
+    body {
+        padding: 25px 15px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    #cartas {
+        grid-template-columns: repeat(4, 1fr);
+
+        gap: 12px;
+
+        max-width: 600px;
+    }
+
+    .carta::before {
+        font-size: 40px;
+    }
+}
+
+
+
+
+@media (max-width: 550px) {
+
+    h1 {
+        font-size: 28px;
+
+        margin-bottom: 20px;
+    }
+
+    #cartas {
+        grid-template-columns: repeat(4, 1fr);
+
+        gap: 8px;
+
+        max-width: 420px;
+    }
+
+    .carta {
+        border-radius: 9px;
+    }
+
+    .carta::before {
+        font-size: 30px;
+    }
+
+    .mensagem-vitoria {
+        padding: 30px 20px;
+    }
+
+    .mensagem-vitoria h2 {
+        font-size: 25px;
+    }
+}
+
+
+
+@media (max-width: 380px) {
+
+    body {
+        padding: 20px 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    #cartas {
+        gap: 6px;
+    }
+
+    .carta::before {
+        font-size: 24px;
+    }
+}

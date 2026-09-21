@@ -95,6 +95,22 @@ cartas.forEach(function (carta) {
 
 })
 
+function embaralharCartas() {
+    const cartasArray = Array.from(cartas)
+
+    cartasArray.sort(function() {
+        return Math.random() - 0.5
+    })
+
+    const mensagem = document.getElementById("mensagem-vitoria")
+
+    cartasArray.forEach(function(carta) {
+        document.getElementById("cartas").insertBefore(carta, mensagem)
+    })
+}
+
+embaralharCartas()
+
 function reiniciarJogo() {
     location.reload();
 }
